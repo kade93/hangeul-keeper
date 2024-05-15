@@ -1,0 +1,108 @@
+
+
+#container {
+    display: flex;
+    height: 90vh;
+    position: relative;  /* Keep this if you need absolute positioning inside */
+    align-items: center;  /* Vertically center all children */
+    justify-content: space-between;  /* Even spacing between children */
+}
+
+#drop-zone, #result-zone {
+    width: calc(50% - 20px); /* Adjust width to account for margin */
+    height: 80vh; /* Set a specific height to define overflow boundary */
+    float: left;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center children horizontally */
+    padding: 20px; /* Padding for aesthetics */
+    box-sizing: border-box; /* Include padding and border in the width and height */
+    overflow-y: auto; /* Enable vertical scrolling when content overflows */
+    background-color: #f9f9f9; /* Optional: background color */
+}
+
+#drop-zone span, #result-zone span {
+    color: #ccc;  /* Light gray color for the watermark text */
+    font-style: italic;  /* Italicize text to give a watermark-like appearance */
+}
+
+#drop-zone div {
+    width: 100%; /* Slightly less than the container for some padding effect */
+    padding: 3px; /* Padding inside each file name div */
+    margin-top: 1px; /* Space between entries */
+    border: 0.5px solid #ddd; /* Subtle border for each file entry */
+    box-sizing: border-box;
+}
+
+#result-zone {
+    margin-left: 10px; /* Adds a gap between the zones */
+}
+
+.result-entry {
+    align-self: flex-start; /* Align this item to the start within a flex container */
+    width: 100%; /* Ensure it spans the full width of the container */
+}
+
+
+#process-button {
+    position: absolute; /* Positions the button absolutely within the container */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Offset the button by half its width and height */
+    z-index: 10; /* Higher z-index to ensure it's on top of zones */
+    padding: 10px 20px;
+    background-color: #4444c9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+#navigation {
+    width: 100%;
+    padding: 10px;
+    background: #f0f0f0;
+    box-sizing: border-box;
+}
+
+button#open-dialog-btn {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Bootstrap primary blue, for example */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input#save-path {
+    width: 80%;
+    padding: 8px;
+    cursor: not-allowed; /* Shows a 'no action' cursor */
+    background-color: #f3f3f3; /* Light grey background to indicate non-interactivity */
+    border: 1px solid #ccc; /* Subtle border color */
+    color: #888; /* Dim the text color to enhance the read-only appearance */
+}
+
+
+footer#footer {
+    text-align: center;
+    padding: 5px;
+    margin-top: 5px;
+    color: #333; /* Dark grey text color */
+}
+
+footer#footer p {
+    margin: 5px 0; /* Small vertical margin for spacing between lines */
+}
+
+footer#footer a {
+    color: #0066cc; /* Style for the link */
+    text-decoration: none; /* No underline */
+}
+
+footer#footer a:hover {
+    text-decoration: underline; /* Underline on hover for better interaction */
+}

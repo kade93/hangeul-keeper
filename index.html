@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한글 키퍼</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="navigation">
+        <input type="text" id="save-path" readonly>
+        <button id="open-dialog-btn">저장 경로 설정</button>
+    </div>
+    <div id="container">
+        <div id="drop-zone">
+            <span id="drop-zone-text">파일을 여기에 드래그 앤 드롭하세요.</span>
+        </div>
+        <button id="process-button">자음/모음 모으기 (NFD -> NFC) </button>
+        <div id="result-zone">
+            <span id="result-zone-text">변환된 파일 목록</span>
+        </div>
+    </div>
+    <footer id="footer">
+        <p>Version 1.0.0</p>
+        <p>Made by <a href="https://github.com/kade93" target="_blank">kade93</a></p>
+    </footer>
+    <script src="renderer.js"></script>
+</body>
+</html>

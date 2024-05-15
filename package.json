@@ -1,0 +1,19 @@
+{
+  "name": "electron-hangeul-keeper",
+  "version": "1.0.0",
+  "description": "make hangeul vowels consonant combined",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kade93",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^30.0.2",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.6.3"
+  }
+}
